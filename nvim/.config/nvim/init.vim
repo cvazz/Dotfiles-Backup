@@ -45,6 +45,12 @@ set mouse=a
 set ignorecase
 set smartcase
 
+
+" Python Support
+
+let g:python3_host_prog='/home/cvaz/miniconda3/bin/python'
+
+
 " ...general settings
 
 call plug#begin('~/.config/nvim/plugged')
