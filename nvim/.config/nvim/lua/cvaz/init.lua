@@ -1,6 +1,8 @@
 require('cvaz.remap')
-require('cvaz.telescope')
-require('cvaz.lightline')
+require('cvaz.plugins.telescope')
+require('cvaz.plugins.treesitter')
+require('cvaz.plugins.undotree')
+--  require('cvaz.lightline')
 
 
 require('nvim_comment').setup()
