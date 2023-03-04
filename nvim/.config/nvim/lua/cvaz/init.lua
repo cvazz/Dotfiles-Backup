@@ -1,5 +1,6 @@
+require('cvaz.remap')
 require('cvaz.telescope')
--- require('cvaz.lightline')
+require('cvaz.lightline')
 
 
 require('nvim_comment').setup()
