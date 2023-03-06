@@ -1,0 +1,36 @@
+
+
+-- line number rules
+vim.opt.nu = true
+vim.opt.relativenumber = true
+
+-- tab rules
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+
+-- enables auto indent
+vim.opt.smartindent = true
+
+
+-- undo files
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undofile = true
+
+
+-- search rules
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+
+-- color rules
+vim.opt.termguicolors = true
+
+vim.opt.scrolloff = 4
+vim.opt.signcolumn = "yes"
+vim.opt.isfname:append("@-@")
+
+vim.opt.updatetime = 50
+
+vim.opt.colorcolumn = "80"
+
