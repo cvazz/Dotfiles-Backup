@@ -6,6 +6,7 @@ vim.cmd([[colorscheme gruvbox]])
 -- line number rules
 vim.opt.nu = true
 vim.opt.relativenumber = true
+vim.opt.wrap = false
 
 -- tab rules
 vim.opt.tabstop = 4
@@ -35,6 +36,10 @@ vim.opt.termguicolors = true
 vim.opt.scrolloff = 4
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
+
+-- new tabs appear on the right and below
+vim.opt.splitbelow = true
+vim.opt.splitright = true
 
 vim.opt.updatetime = 50
 

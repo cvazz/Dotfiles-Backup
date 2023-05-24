@@ -1,10 +1,9 @@
 require('cvaz.remap')
 require('cvaz.set')
+require('cvaz.packer')
 
 
 
-vim.cmd([[set splitbelow ]])
-vim.cmd([[set splitright ]])
 
 -- navigate buffers without losing unsaved work
 vim.cmd([[set hidden ]])
@@ -23,7 +22,6 @@ vim.cmd([[let g:python3_host_prog='/home/cvaz/miniconda3/bin/python']])
 -- require('cvaz.plugins.treesitter')
 -- require('cvaz.plugins.undotree')
 -- require('cvaz.lightline')
-
 
 
 

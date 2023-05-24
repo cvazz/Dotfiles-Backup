@@ -2,8 +2,8 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Move automatically
--- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
--- vim.keymap.set("v", "k", ":m '<-2<cr>gv=gv")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<cr>gv=gv")
 --
 -- Keep things centered
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
