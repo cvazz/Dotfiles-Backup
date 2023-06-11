@@ -1,5 +1,6 @@
 vim.g.mapleader = " " 
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex) -- go to folder view
+vim.keymap.set("n", "<leader>rp", ":w !python <CR>") -- go to folder view
 
 -- Move automatically
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -11,7 +12,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
-
 -- Paste that does not replace
 vim.keymap.set("x", "<leader>p", "\"_dP")
 
@@ -19,3 +19,5 @@ vim.keymap.set("x", "<leader>p", "\"_dP")
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
+
+

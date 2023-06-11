@@ -27,14 +27,20 @@ return require('packer').startup(function(use)
     use {'gruvbox-community/gruvbox'}
 
 
+    -- Integrate tmux & nvim
+    use ('christoomey/vim-tmux-navigator', {lazy = false})
 
+    -- Integrate tmux & nvim
+    use {'luk400/vim-jukit'}
 
     -- Syntax Highlighting
 
     use( 'nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
 
-    use 'Exafunction/codeium.vim' -- AI code Completion
+    -- AI code Completion
+
+    use 'Exafunction/codeium.vim'
 
 
     use { -- LSP-zero Setup

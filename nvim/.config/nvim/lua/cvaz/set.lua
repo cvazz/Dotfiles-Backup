@@ -1,6 +1,7 @@
 vim.cmd([[colorscheme gruvbox]])
 -- vim.opt.colorscheme=gruvbox
--- set background=dark
+-- vim.opt.background=dark
+vim.opt.swapfile=false
 
 
 -- line number rules
