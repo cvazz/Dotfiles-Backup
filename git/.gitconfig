@@ -3,4 +3,4 @@
 	email = 50203100+cvazz@users.noreply.github.com
 
 [core]
-	editor = vim
+	editor = nvim
