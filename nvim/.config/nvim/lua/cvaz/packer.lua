@@ -31,7 +31,7 @@ return require('packer').startup(function(use)
     use ('christoomey/vim-tmux-navigator', {lazy = false})
 
     -- Integrate tmux & nvim
-    use {'luk400/vim-jukit'}
+    -- use {'luk400/vim-jukit'}
 
     -- Syntax Highlighting
 
@@ -42,6 +42,44 @@ return require('packer').startup(function(use)
 
     use 'Exafunction/codeium.vim'
 
+    -- DAP Installer to manage DAPs
+    use {
+        "folke/which-key.nvim",
+        config = function()
+            vim.o.timeout = true
+            vim.o.timeoutlen = 300
+            require("which-key").setup {
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            }
+        end
+    }
+
+    -- DAP Installer to manage DAPs
+    use "Pocco81/DAPInstall.nvim"
+
+    -- Debugging Adapter
+    use {
+        "mfussenegger/nvim-dap",
+        opt = true,
+        event = "BufReadPre",
+        module = { "dap" },
+        -- wants = { "nvim-dap-virtual-text", "DAPInstall.nvim", "nvim-dap-ui", "nvim-dap-python" },
+        wants = { "nvim-dap-virtual-text", "DAPInstall.nvim", "nvim-dap-ui", "nvim-dap-python", "which-key.nvim" },
+        requires = {
+            "Pocco81/DAPInstall.nvim",
+            "theHamsta/nvim-dap-virtual-text",
+            "rcarriga/nvim-dap-ui",
+            "mfussenegger/nvim-dap-python",
+            "nvim-telescope/telescope-dap.nvim",
+            "folke/which-key.nvim",
+            { "jbyuki/one-small-step-for-vimkind", module = "osv" },
+        },
+        config = function()
+            require("config.dap").setup()
+        end,
+    }
 
     use { -- LSP-zero Setup
         'VonHeikemen/lsp-zero.nvim',
