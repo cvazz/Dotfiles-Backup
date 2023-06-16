@@ -8,7 +8,7 @@ for prog in ${list_of_programs[@]}; do
 done
 
 
-list_of_dotfiles=[ "zsh/.zshrc" "git/.gitconfig" "tmux/.tmux.conf" ] 
+list_of_dotfiles=[ "zsh/.zshrc" "git/.gitconfig" "tmux/.tmux.conf" "pycodestyle" ] 
 for dfile in ${list_of_dotfiles[@]}; do 
     ln -s "~/.dotfiles/$dfile" "~/$dfile"
 
