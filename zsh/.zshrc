@@ -4,6 +4,8 @@
 
 alias vim="nvim"
 alias vi="nvim"
+alias vimdiff="nvim -d"
+alias ll="[ \"\$(exa .)\" ] && exa  || exa -a"
 
 function les() {
    zathura $@ &
@@ -18,6 +20,7 @@ xdg-mime default firefox.desktop x-scheme-handler/https
 xdg-mime default firefox.desktop x-scheme-handler/http
 
 xdg-mime default org.pwmt.zathura.desktop application/pdf
+export EDITOR=nvim
 
 
 ###############################################################################
@@ -68,3 +71,11 @@ bindkey '^R' history-incremental-search-backward
 bindkey '^S' history-incremental-search-forward
 bindkey "^Z" undo
 
+# Yank to the system clipboard
+function vi-yank-xclip {
+    zle vi-yank
+   echo "$CUTBUFFER" | xclip -i
+}
+
+zle -N vi-yank-xclip
+bindkey -M vicmd 'y' vi-yank-xclip
