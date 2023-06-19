@@ -15,7 +15,7 @@ vim.cmd([[set mouse=a]])
 
 -- Python Support
 
-vim.cmd([[let g:python3_host_prog='/home/cvaz/miniconda3/bin/python']])
+-- vim.cmd([[let g:python3_host_prog='/home/cvaz/miniconda3/bin/python']])
 
 
 -- require('cvaz.plugins.telescope')

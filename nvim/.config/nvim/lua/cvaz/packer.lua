@@ -7,6 +7,9 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+    -- Color scheme
+    use "savq/melange-nvim"
+
     -- Folder Tree
     use 'nvim-tree/nvim-tree.lua'
 
@@ -42,27 +45,7 @@ return require('packer').startup(function(use)
 
 
 
-    -- AI code Completion
 
-    --- AI code Completion
-
-    -- use "github/copilot.vim"
-    --    use 'Exafunction/codeium.vim'
-    use {
-        "zbirenbaum/copilot.lua",
-        cmd = "Copilot",
-        event = "InsertEnter",
-        config = function()
-            require("copilot").setup({
-                opts = {
-                    suggestion = {
-                        auto_trigger = true,
-                        accept_word = "<M-j>",
-                    }
-                }
-            })
-        end,
-    }
 
     -- DAP Installer to manage DAPs
     use {
@@ -126,4 +109,80 @@ return require('packer').startup(function(use)
             { 'rafamadriz/friendly-snippets' }, -- Optional
         }
     }
+    --- AI code Completion
+
+    -- use "github/copilot.vim"
+   
+
+    --    use 'Exafunction/codeium.vim'
+    
+    
+    -- AI code Completion
+    -- use {
+    --     "zbirenbaum/copilot.lua",
+    --     cmd = "Copilot",
+    --     event = "InsertEnter",
+    --     config = function()
+    --         require("copilot").setup({
+    --             opts = {
+    --                 suggestion = {
+    --                     auto_trigger = true,
+    --                     accept_word = "<M-j>",
+    --                 }
+    --             }
+    --         })
+    --     end,
+    -- }
+    use {
+        "zbirenbaum/copilot.lua",
+        cmd = "Copilot",
+        event = "InsertEnter",
+        config = function()
+            require('copilot').setup({
+                panel = {
+                    enabled = true,
+                    auto_refresh = false,
+                    keymap = {
+                        jump_prev = "[[",
+                        jump_next = "]]",
+                        accept = "<CR>",
+                        refresh = "gr",
+                        open = "<M-CR>"
+                    },
+                    layout = {
+                        position = "bottom", -- | top | left | right
+                        ratio = 0.4
+                    },
+                },
+                suggestion = {
+                    enabled = true,
+                    auto_trigger = true,
+                    debounce = 75,
+                    keymap = {
+                        accept = "<M-l>",
+                        -- accept_word = "<M-l>",
+                        accept_line = false,
+                        next = "<M-]>",
+                        prev = "<M-[>",
+                        dismiss = "<C-]>",
+                    },
+                },
+                filetypes = {
+                    yaml = false,
+                    markdown = false,
+                    help = false,
+                    gitcommit = false,
+                    gitrebase = false,
+                    hgcommit = false,
+                    svn = false,
+                    cvs = false,
+                    ["."] = false,
+                },
+                copilot_node_command = 'node', -- Node.js version must be > 16.x
+                server_opts_overrides = {},
+            })
+        end,
+    }
+
+
 end)

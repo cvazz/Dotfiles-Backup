@@ -1,6 +1,8 @@
-vim.cmd([[colorscheme gruvbox]])
+-- vim.cmd([[colorscheme gruvbox]])
 -- vim.opt.colorscheme=gruvbox
--- vim.opt.background=dark
+-- vim.opt.background=light
+vim.opt.termguicolors = true
+vim.cmd.colorscheme 'melange'
 vim.opt.swapfile=false
 
 

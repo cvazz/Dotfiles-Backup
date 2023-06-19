@@ -1,8 +1,3 @@
--- local copilot = require('copilot')
--- copilot.suggestion.auto_trigger = true
-
--- require('copilot')
-
 -- require('copilot').setup({
 --     panel = {
 --         enabled = true,

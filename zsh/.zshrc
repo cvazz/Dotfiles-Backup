@@ -16,10 +16,7 @@ function les() {
 ############################# Default Applications ############################
 ###############################################################################
 
-xdg-mime default firefox.desktop x-scheme-handler/https
-xdg-mime default firefox.desktop x-scheme-handler/http
-
-xdg-mime default org.pwmt.zathura.desktop application/pdf
+source ~/.zshrc_local
 export EDITOR=nvim
 
 
