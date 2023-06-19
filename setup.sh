@@ -2,7 +2,7 @@
 
 # // install programs
 
-list_of_programs=[ "firefox-tridactyl" "code" "zsh" "tmux" "git" ] 
+list_of_programs=[ "firefox-tridactyl" "code" "zsh" "tmux" "git" "starship"] 
 for prog in ${list_of_programs[@]}; do 
     pamac build $prog
 done
